@@ -5,7 +5,7 @@ This multi-factor API uses JWTs to authenticate users on protected endpoints. Ea
 
 This API uses MongoDB as a database. Please add your MongoDB connection URL into `db/db.js`.
 
-#Installation and Running API
+**Installation and Running API**
 1. `npm install`.
 2. `npm start`.
 
