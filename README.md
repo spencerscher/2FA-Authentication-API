@@ -3,6 +3,12 @@ Multi-Factor Authentication API that allows users to create accounts and enable 
 
 This multi-factor API uses JWTs to authenticate users on protected endpoints. Each JWT (1 hr expiry time) is signed with the respective users' hashed password in order to invalidate any non-expired JWTs on a password reset. Therefore, when a password is reset, all non-expired JWTs for a particular account will be invalidated as the signer has now changed for that account.
 
+This API uses MongoDB as a database. Please add your MongoDB connection URL into `db/db.js`.
+
+#Installation and Running API
+1. `npm install`.
+2. `npm start`.
+
 **Routes**<br />
 `/account/register` - Allows the user to register for an account.<br />
 `/account/login` - Allows the user to log in to an account.<br />
