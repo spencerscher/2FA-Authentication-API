@@ -1,5 +1,5 @@
 # Multi-Factor-Authentication
-Multi-Factor Authentication API that allows users to create accounts and enable 2FA.
+Multi-Factor Authentication API that allows users to create accounts and enable 2FA. The current TOTP 2FA implementation will generate unique QR codes to scan into a multi-factor app of choice (Google Authenticator).
 
 This multi-factor API uses JWTs to authenticate users on protected endpoints. Each JWT (1 hr expiry time) is signed with the respective users' hashed password in order to invalidate any non-expired JWTs on a password reset. Therefore, when a password is reset, all non-expired JWTs for a particular account will be invalidated as the signer has now changed for that account.
 
